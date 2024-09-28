@@ -1,0 +1,270 @@
+:root {
+  --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  --color-text-light: rgba(255, 255, 255, 0.87);
+  --color-background: #080808; /* Black */
+  --color-accent: #7A3100;
+  --border-color: #080808;
+  font-family: var(--font-primary);
+  color-scheme: light dark;
+  color: var(--color-text-light);
+}
+
+body {
+  background-color: var(--color-background) !important; /* Ensure black background */
+  color: var(--color-text-light);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+}
+/* General Spacing */
+.container {
+  padding-top: 20px;
+}
+
+
+.text {
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
+}
+
+/* resume */
+#Resumes {
+  background-color: black;
+  color: white;
+}
+#Resumes h1, #Resumes h2 {
+  color: red;
+}
+#resume-section {
+  padding: 40px 0; /* Reduced padding */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Title Styling */
+h1.big-2 {
+  font-size: 3rem; /* Reduced font size */
+  color: #343a40;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Reduced padding */
+  margin-bottom: 10px; /* Reduced margin */
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+h1.big-2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 3px; /* Reduced height of underline */
+  background-color: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+h1.big-2:hover::after {
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.5rem; /* Reduced font size */
+  color: #6c757d;
+  font-weight: bold;
+  margin-bottom: 15px; /* Reduced margin */
+  animation: slideIn 1s ease-in-out;
+}
+
+p {
+  animation: fadeInUp 1.2s ease-in-out;
+  font-size: 0.9rem; /* Reduced font size */
+}
+
+.resume-section-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 containers in a row */
+  gap: 20px; /* Spacing between the containers */
+}
+
+.resume-wrap {
+  background-color: #2D2D2D; /* Dark grey background to contrast with black */
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(179, 179, 179, 0.5); /* Cement-like shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-wrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(179, 179, 179, 0.7); /* Stronger shadow */
+}
+
+.resume-wrap .date {
+  font-size: 1rem; /* Reduced font size */
+  color: #007bff;
+  font-weight: bold;
+}
+
+.resume-wrap h2 {
+  font-size: 1.4rem; /* Reduced font size */
+  color: #343a40;
+}
+
+.resume-wrap p {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.resume-wrap ul {
+  margin-top: 10px; /* Reduced margin */
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resume-wrap ul li {
+  margin-bottom: 8px; /* Reduced margin */
+  color: #343a40;
+}
+
+/* Underline and Heading Animation */
+.underline {
+  width: 50px; /* Reduced width */
+  height: 4px; /* Reduced height */
+  background: red;
+  margin-bottom: 20px;
+  animation: expandLine 0.8s ease-in-out;
+}
+a.btn-primary {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+a.btn-primary:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px; /* Reduced padding */
+  font-size: 0.9rem; /* Reduced font size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: scale(1.03); /* Reduced scale */
+}
+
+
+/* projects */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.project-card .main-row1, .project-card .main-row {
+  text-align: center;
+}
+
+h5 {
+  color: #d9534f;
+}
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px); /* Reduced translate distance */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px); /* Reduced translate distance */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Reduced translate distance */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px; /* Reduced width */
+  }
+}
+
+/* Responsive Spacing */
+@media (max-width: 600px) {
+  .resume-section-container {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+}
+  h1.big-2 {
+    font-size: 2rem; /* Further reduced for mobile */
+  }
+
+  .resume-wrap h2 {
+    font-size: 1.2rem; /* Reduced for mobile */
+  }
+
+  .resume-wrap p,
+  .resume-wrap ul {
+    font-size: 0.8rem; /* Reduced font size */
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 12px 0; /* Reduced padding */
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    transform: scale(1); /* Reset scale for mobile */
+  }
+}
